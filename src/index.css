@@ -176,6 +176,51 @@ p {
 	padding-top: .5rem;
 }
 
+/* SINGLE MOVIE */
+
+.single-movie {
+	display: grid;
+	gap: 2rem;
+	width: 90vw;
+	max-width: 1170px;
+	margin: 3rem auto;
+}
+
+.single-movie img {
+	width: 100%;
+	display: block;
+}
+
+.single-movie-info p {
+	max-width: 30rem;
+	margin-top: 1.6rem;
+	font-size: 1.3rem;
+	line-height: 1.6;
+}
+
+.btn {
+	display: inline-block;
+	padding: .6rem;
+	margin-top: .6rem;
+	margin-bottom: 0;
+	color: #f9f9f9;
+	background: var(--clr-primary);
+	border-radius: .3rem;
+	letter-spacing: .1rem;
+	text-transform: capitalize;
+}
+
+.error-page {
+	padding: 3rem;
+	text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+	.single-movie {
+		grid-template-columns: 1fr 2fr;
+	}
+}
+
 /* LOADING */
 
 @keyframes spinner {
