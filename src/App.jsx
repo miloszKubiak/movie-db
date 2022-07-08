@@ -7,12 +7,6 @@ import SingleMovie from "./SingleMovie";
 import Error from "./Error";
 
 function App() {
-	const [theme, setTheme] = useState("light-theme");
-
-	useEffect(() => {
-		document.documentElement.className = theme;
-		localStorage.setItem("theme", theme);
-	});
 
 	return (
 		<Routes>

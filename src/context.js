@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import useFetch from "./useFetch";
 
 const AppContext = React.createContext();
@@ -6,10 +6,32 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
 	const [query, setQuery] = useState("punisher");
 	const { isLoading, error, data: movies } = useFetch(`&s=${query}`);
+	const [theme, setTheme] = useState("light-theme");
+
+	const toggleTheme = () => {
+		if (theme === "light-theme") {
+			setTheme("dark-theme");
+		} else {
+			setTheme("light-theme");
+		}
+	};
+
+	useEffect(() => {
+		document.documentElement.className = theme;
+		localStorage.setItem("theme", theme);
+	});
 
 	return (
 		<AppContext.Provider
-			value={{ isLoading, error, movies, query, setQuery }}
+			value={{
+				isLoading,
+				error,
+				movies,
+				query,
+				setQuery,
+				theme,
+				toggleTheme,
+			}}
 		>
 			{children}
 		</AppContext.Provider>

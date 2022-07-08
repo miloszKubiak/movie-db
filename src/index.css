@@ -147,7 +147,7 @@ p {
 	width: 90vw;
 	max-width: 1170px;
 	margin: 0 auto;
-	margin-top: 5rem;
+	margin-top: 2rem;;
 	margin-bottom: 3rem;
 }
 
@@ -238,4 +238,24 @@ p {
 	border: 3px solid #ccc;
 	border-top-color: var(--clr-primary);
 	animation: spinner .6s linear infinite;
+}
+
+/* THEME BUTTON */
+
+.theme-container {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 90vw;
+	margin: 0 auto;
+	margin-top: 2rem;
+}
+
+.theme-btn {
+	font-size: 2rem;
+	border: none;
+	cursor: pointer;
+	color: var(--clr-font);
+	background: transparent;
+	transition: all .5s linear;
 }
