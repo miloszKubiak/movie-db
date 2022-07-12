@@ -1,12 +1,13 @@
 import React, { useState, useContext, useEffect } from "react";
 import useFetch from "./useFetch";
+import { getStorageTheme } from "./utils";
 
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
 	const [query, setQuery] = useState("punisher");
 	const { isLoading, error, data: movies } = useFetch(`&s=${query}`);
-	const [theme, setTheme] = useState("light-theme");
+	const [theme, setTheme] = useState(getStorageTheme());
 
 	const toggleTheme = () => {
 		if (theme === "light-theme") {
