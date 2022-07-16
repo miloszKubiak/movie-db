@@ -6,7 +6,8 @@ Movie DB application written in React using some of the most important functiona
 - React Hooks(useState, useEffect, custom hooks)
 - Context API
 - Styled Components
-- React Router 6
+-React Router 6
+
 App also includes a theme change which is saved in local storage.
 
 Setup:
